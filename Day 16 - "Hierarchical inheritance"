@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+void display(int l = 1, int b = 1, double l1 = 1, double b1 = 1, double h = 1);
+class Shape
+{
+    int l, b;
+    double l1, b1, h;
+    public:
+    int area(int l, int b)
+    {
+        return l*b;
+    }
+    int area(double l1, double b1, double h)
+    {
+        return l1*b1*h;
+    }
+};
+int main()
+{
+    Shape ar;
+    int a, l, b;
+    double l1, b1, h;
+    cin >> a;
+    if(a==1)
+    {
+        cout<<"Enter the length and breadth: ";
+        cin>>l>>b;
+        cout<<"Area of the rectangle: "<<ar.area(l,b);
+    }
+    else if (a==2)
+    {
+        cin>>l1>>b1>>h;
+        cout<<"Area of the cuboid: "<<ar.area(l1, b1, h);
+    }
+    return 0;
+}
