@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+bool isPrime(int num)
+{
+    int d = 2;
+    while (d<=num-1)
+    {
+        if (num%d == 0) return false;
+        d++;
+        
+    }
+    return true;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    for (int i = 2; i <= n; i++)
+    {
+        if (isPrime(i) == true)
+        {
+            cout << i << endl;
+        }
+    }
+    return 0;
+}
